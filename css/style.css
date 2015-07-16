@@ -1,0 +1,58 @@
+body {
+	font-family: 'Lato', sans-serif;
+	color: #666756;
+}
+.container {
+	max-width: 1000px;
+	margin: 0 auto 0 auto;
+}
+.hero-name {
+	font-family: 'Lato', sans-serif; font-weight: 300;
+	font-size: 52px;
+}
+.logo {
+	margin-top: 25px;
+}
+/*
+.header-title {
+	padding-right: 30px;
+}*/
+.featured {
+	margin: 30px 0 15px 15px;
+	color: #bbbbbb;
+}
+.divider {
+	border-bottom: 5px solid #bbb;
+	padding-bottom: 20px;
+	margin-bottom: 30px;
+	margin-right: 0px;
+	margin-left: 0px;
+}
+/*
+ *
+ * Media Sizes
+ * 
+ */
+@media screen and (max-width: 499px) {
+	.hero-name {
+		font-size: 24px;
+	}
+	h4 {
+		font-size: 16px;
+	}
+}
+@media screen and (min-width: 500px) {
+	.hero-name {
+		font-size: 38px; 
+	}
+}
+@media screen and (min-width: 650px) {
+	.hero-name {
+		font-size: 52px; 
+	}
+}
+@media screen and (min-width: 768px) and (max-width: 990px) {
+	h3 {
+		font-size: 20px; 
+	}
+}

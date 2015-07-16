@@ -1,2 +1,2 @@
-# nhadinat.github.io
-Nathan Hadinata's GitHub Page
+# frontend-nanodegree-portfolio
+1st Udacity Project: Front-End Web Developer Nanodegree
