@@ -1,58 +1,95 @@
 body {
-	font-family: 'Lato', sans-serif;
-	color: #666756;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
 }
 .container {
-	max-width: 1000px;
-	margin: 0 auto 0 auto;
+    max-width: 1000px;
+    margin: 0 auto 0 auto;
+    background-color: #fff;
 }
 .hero-name {
-	font-family: 'Lato', sans-serif; font-weight: 300;
-	font-size: 52px;
+    font-family: 'Lato', sans-serif; font-weight: 300;
+    font-size: 52px;
 }
 .logo {
-	margin-top: 25px;
+    margin-top: 25px;
 }
-/*
-.header-title {
-	padding-right: 30px;
-}*/
 .featured {
-	margin: 30px 0 15px 15px;
-	color: #bbbbbb;
+    margin: 30px 0 15px 15px;
+    color: #aaa;
 }
 .divider {
-	border-bottom: 5px solid #bbb;
-	padding-bottom: 20px;
-	margin-bottom: 30px;
-	margin-right: 0px;
-	margin-left: 0px;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+    margin-right: 0px;
+    margin-left: 0px;
 }
 /*
  *
  * Media Sizes
- * 
+ *
  */
 @media screen and (max-width: 499px) {
-	.hero-name {
-		font-size: 24px;
-	}
-	h4 {
-		font-size: 16px;
-	}
+    .hero-name {
+        font-size: 24px;
+    }
+    h4 {
+        font-size: 16px;
+    }
 }
 @media screen and (min-width: 500px) {
-	.hero-name {
-		font-size: 38px; 
-	}
+    .hero-name {
+        font-size: 38px;
+    }
 }
 @media screen and (min-width: 650px) {
-	.hero-name {
-		font-size: 52px; 
-	}
+    .hero-name {
+        font-size: 52px;
+    }
 }
 @media screen and (min-width: 768px) and (max-width: 990px) {
-	h3 {
-		font-size: 20px; 
-	}
+    h3 {
+        font-size: 20px;
+    }
+}
+
+/*
+ *
+ * Box Shadow (Effect 8 CSS-Tricks)
+ *
+ */
+
+.effect8
+{
+    position:relative;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+       -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+            box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+.effect8:before, .effect8:after
+{
+    content:"";
+    position:absolute;
+    z-index:-1;
+    -webkit-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    -moz-box-shadow:0 0 20px rgba(0,0,0,0.8);
+    box-shadow:0 0 20px rgba(0,0,0,0.8);
+    top:10px;
+    bottom:10px;
+    left:0;
+    right:0;
+    -moz-border-radius:100px / 10px;
+    border-radius:100px / 10px;
+}
+.effect8:after
+{
+    right:10px;
+    left:auto;
+    -webkit-transform:skew(8deg) rotate(3deg);
+       -moz-transform:skew(8deg) rotate(3deg);
+        -ms-transform:skew(8deg) rotate(3deg);
+         -o-transform:skew(8deg) rotate(3deg);
+            transform:skew(8deg) rotate(3deg);
 }
