@@ -17,7 +17,7 @@ p {
     margin: 0 auto 0 auto;
     background-color: #fff;
 }
-.hero-name {
+.header-name {
     font-family: 'Lato', sans-serif; font-weight: 300;
     font-size: 26px;
 }
@@ -57,7 +57,7 @@ p {
  *
  */
 @media screen and (min-width: 500px) {
-    .hero-name {
+    .header-name {
         font-size: 38px;
     }
     .featured {
@@ -71,7 +71,7 @@ p {
     }
 }
 @media screen and (min-width: 768px) {
-    .hero-name {
+    .header-name {
         font-size: 52px;
     }
     .project {
