@@ -10,7 +10,7 @@ h3 {
     font-size: 20px;
 }
 p {
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 .container {
     max-width: 1000px;
@@ -33,17 +33,22 @@ p {
     border-bottom: 1px solid #aaa;
     padding-bottom: 20px;
     margin-bottom: 30px;
-    margin-right: 0px;
-    margin-left: 0px;
+    margin-right: 0;
+    margin-left: 0;
 }
 .project {
     min-width: 100%;
     padding-bottom: 15px;
 }
-.shadow {
+.projectImage {
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
             box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+.projectImage:hover {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    cursor: pointer;
 }
 
 /*
