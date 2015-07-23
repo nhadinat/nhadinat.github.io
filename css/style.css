@@ -39,13 +39,10 @@ p {
 }
 .footer {
     border-top: 1px solid #aaa;
-    padding-top: 20px;
-    margin-top: 30px;
-    margin-right: 0;
-    margin-left: 0;
+    padding: 20px;
 }
-.footer-nav {
-    min-width: 20%;
+.footer-logo {
+    max-width: 30px;
 }
 .project {
     min-width: 100%;
