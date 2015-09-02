@@ -4,7 +4,3 @@ dist
 .sass-cache
 .DS_Store
 .publish
-css
-img
-js
-index.html
