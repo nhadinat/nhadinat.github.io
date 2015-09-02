@@ -17,20 +17,20 @@ var gulp = require('gulp'),
 
 // Clean Dist
 gulp.task('clean', function (cb) {
-  del(['./dist/css/*', './dist/js/*', './dist/img/*'], cb);
+  del(['./css/*', './js/*', './img/*'], cb);
 });
 
 // Move JPGs Into Dist (Unfortunately, I cannot use imagemin because I run Win7 :'( )
 gulp.task('images', function() {
   return gulp.src('./src/img/*.jpg')
-    .pipe(gulp.dest('./dist/img'));
+    .pipe(gulp.dest('./img'));
 });
 
 // Optimize PNGs
 gulp.task('pngs', ['images'], function () {
   return gulp.src('./src/img/*.png')
     .pipe(imageminPngquant({quality: '65-80', speed: 4})())
-    .pipe(gulp.dest('./dist/img'));
+    .pipe(gulp.dest('./img'));
 });
 
 // Concatenate And Minify JavaScript
@@ -38,7 +38,7 @@ gulp.task('scripts', ['pngs'], function(){
   return gulp.src('./src/js/bootstrap.js')
     .pipe(rename('bootstrap.min.js'))
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'));
+    .pipe(gulp.dest('./js'));
 });
 
 /* TODO: Figure out how to unCSS bootstrap
@@ -46,7 +46,7 @@ gulp.task('scripts', ['pngs'], function(){
 gulp.task('uncss', ['scripts'], function() {
   return gulp.src('./src/views/css/bootstrap-grid.css')
     .pipe(uncss({html: './src/views/pizza.html'}))
-    .pipe(gulp.dest('./dist/views/css'));
+    .pipe(gulp.dest('./views/css'));
 });
 */
 
@@ -55,15 +55,15 @@ gulp.task('styles', ['scripts'], function(){
   var style = gulp.src('./src/css/style.css')
     .pipe(rename('style.min.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./css'));
   var bootstrap = gulp.src('./src/css/bootstrap.css')
     .pipe(rename('bootstrap.min.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./css'));
   var bootstrapTheme = gulp.src('./src/css/bootstrap-theme.css')
     .pipe(rename('bootstrap-theme.min.css'))
     .pipe(minifyCSS())
-    .pipe(gulp.dest('./dist/css'));
+    .pipe(gulp.dest('./css'));
 
   return merge(style, bootstrap, bootstrapTheme);
 });
@@ -77,14 +77,14 @@ gulp.task('html', ['styles'], function() {
 
   return gulp.src('./src/*.html')
     .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./'));
 });
 
 // Inline HTML Sources
 gulp.task('inline', ['html'], function() {
-  return gulp.src('./dist/*.html')
+  return gulp.src('./*.html')
     .pipe(inlinesource())
-    .pipe(gulp.dest('./dist/'));
+    .pipe(gulp.dest('./'));
 });
 
 ///////////////* Default *///////////////
