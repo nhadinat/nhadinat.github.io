@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 // Clean Dist
 gulp.task('clean', function (cb) {
-  del(['./dist/css/*', './dist/js/*'], cb);
+  del(['./dist/css/*', './dist/js/*', './dist/img/*'], cb);
 });
 
 // Move JPGs Into Dist (Unfortunately, I cannot use imagemin because I run Win7 :'( )
@@ -77,18 +77,18 @@ gulp.task('html', ['styles'], function() {
 
   return gulp.src('./src/*.html')
     .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./'));
 });
 
 // Inline HTML Sources
 gulp.task('inline', ['html'], function() {
-  return gulp.src('./dist/*.html')
+  return gulp.src('./*.html')
     .pipe(inlinesource())
-    .pipe(gulp.dest('./dist'));
+    .pipe(gulp.dest('./'));
 });
 
 ///////////////* Default *///////////////
-// DEFAULT Group: Optimize, Build, then Deploy
+// DEFAULT Group: Optimize and Build
 gulp.task('default', ['images', 'pngs', 'scripts', 'styles', 'html', 'inline']);
 
 ///////////////* Watch *///////////////
