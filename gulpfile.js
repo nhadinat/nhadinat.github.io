@@ -17,7 +17,7 @@ var gulp = require('gulp'),
 
 // Clean Dist
 gulp.task('clean', function (cb) {
-  del(['./dist/**'], cb);
+  del(['./dist/css/*', './dist/js/*'], cb);
 });
 
 // Move JPGs Into Dist (Unfortunately, I cannot use imagemin because I run Win7 :'( )
@@ -94,5 +94,8 @@ gulp.task('default', ['images', 'pngs', 'scripts', 'styles', 'html', 'inline']);
 ///////////////* Watch *///////////////
 // Watch
 gulp.task('watch', function () {
-    gulp.watch('./src/**', ['default']);
+  gulp.watch('./src/*.html', ['default']);
+  gulp.watch('./src/css/*.css', ['styles']);
+  gulp.watch('./src/js/*.js', ['scripts']);
+  gulp.watch('./src/img/*', ['images', 'pngs']);
 });
