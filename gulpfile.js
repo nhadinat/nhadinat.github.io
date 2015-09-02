@@ -77,14 +77,14 @@ gulp.task('html', ['styles'], function() {
 
   return gulp.src('./src/*.html')
     .pipe(minifyHTML(opts))
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist/'));
 });
 
 // Inline HTML Sources
 gulp.task('inline', ['html'], function() {
-  return gulp.src('./*.html')
+  return gulp.src('./dist/*.html')
     .pipe(inlinesource())
-    .pipe(gulp.dest('./'));
+    .pipe(gulp.dest('./dist/'));
 });
 
 ///////////////* Default *///////////////
