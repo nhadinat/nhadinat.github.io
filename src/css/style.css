@@ -46,7 +46,7 @@ p {
     color: #aaa;
 }
 .project {
-    min-width: 100%;
+    min-width: 50%;
     padding-bottom: 15px;
 }
 .shadow {
