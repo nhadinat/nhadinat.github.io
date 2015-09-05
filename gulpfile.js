@@ -95,7 +95,7 @@ gulp.task('default', ['images', 'pngs', 'scripts', 'styles', 'html', 'inline']);
 // Watch
 gulp.task('watch', function () {
   gulp.watch('./src/*.html', ['default']);
-  gulp.watch('./src/css/*.css', ['styles']);
-  gulp.watch('./src/js/*.js', ['scripts']);
+  gulp.watch('./src/css/*.css', ['default']);
+  gulp.watch('./src/js/*.js', ['default']);
   gulp.watch('./src/img/*', ['images', 'pngs']);
 });
