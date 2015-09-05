@@ -16,7 +16,7 @@ p {
 a {
     color: #444;
 }
-a:hover, a:active {
+a:hover, a:active, a:focus {
     color: #aaa;
 }
 .container {
