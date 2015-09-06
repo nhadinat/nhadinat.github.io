@@ -48,6 +48,9 @@ a:hover, a:active, a:focus {
 .footer > div > a {
     color: #444;
 }
+.footer > div > a:hover, a:active, a:focus {
+    color: #aaa;
+}
 .project {
     min-width: 50%;
     padding-bottom: 15px;
