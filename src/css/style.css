@@ -14,7 +14,7 @@ p {
     margin: 10px 0;
 }
 a {
-    color: #444;
+    color: #337ab7;
 }
 a:hover, a:active, a:focus {
     color: #aaa;
@@ -44,6 +44,9 @@ a:hover, a:active, a:focus {
 .footer {
     border-top: 1px solid #aaa;
     padding: 20px;
+}
+.footer > div > a {
+    color: #444;
 }
 .project {
     min-width: 50%;
