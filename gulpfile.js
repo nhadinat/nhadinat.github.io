@@ -94,8 +94,8 @@ gulp.task('default', ['images', 'pngs', 'scripts', 'styles', 'html', 'inline']);
 ///////////////* Watch *///////////////
 // Watch
 gulp.task('watch', function () {
-  gulp.watch('./src/*.html', ['default']);
-  gulp.watch('./src/css/*.css', ['default']);
-  gulp.watch('./src/js/*.js', ['default']);
+  gulp.watch('./src/*.html', ['html', 'inline']);
+  gulp.watch('./src/css/*.css', ['styles', 'html', 'inline']);
+  gulp.watch('./src/js/*.js', ['scripts', 'html', 'inline']);
   gulp.watch('./src/img/*', ['images', 'pngs']);
 });
