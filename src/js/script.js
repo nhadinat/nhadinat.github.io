@@ -10,19 +10,21 @@
 var Project = function (stringName, stringId, stringUrl){
   this.name = stringName;
   this.id = stringId;
+  this.modalTarget = '#' + stringId;
+  this.modalLabel = this.id + 'Label';
   this.src = stringUrl;
 };
 
 var projects = [1,2,3,4,5,6,7,8];
   // Fill out array with the superclass
-  projects[0] = new Project('Arcade Game', '#arcadeGame', 'img/arcade-game-525x300.jpg');
-  projects[1] = new Project('Javascript Resume', '#jsResume', 'img/js-resume-525x300.jpg');
-  projects[2] = new Project('Website Design Mockup', '#webDesign', 'img/website-mockup-1-525-300.jpg');
-  projects[3] = new Project('Mobile App Wireframe', '#mobileWireframe', 'img/mobile-app-wireframe-1-525x300.jpg');
-  projects[4] = new Project('Wordpress Sites', '#wordPress', 'img/wordpress-customization-525x300.jpg');
-  projects[5] = new Project('Digital Designs', '#digitalDesign', 'img/design-logo-525x300.jpg');
-  projects[6] = new Project('Infographics', '#infographics', 'img/db-infographic-525x300.jpg');
-  projects[7] = new Project('Brand Development', '#brandDevelopment', 'img/Saddleback-Church-Ministry-Brand-525x300.jpg');
+  projects[0] = new Project('Arcade Game', 'arcadeGame', 'img/arcade-game-525x300.jpg');
+  projects[1] = new Project('Javascript Resume', 'jsResume', 'img/js-resume-525x300.jpg');
+  projects[2] = new Project('Website Design Mockup', 'webDesign', 'img/website-mockup-1-525-300.jpg');
+  projects[3] = new Project('Mobile App Wireframe', 'mobileWireframe', 'img/mobile-app-wireframe-1-525x300.jpg');
+  projects[4] = new Project('Wordpress Sites', 'wordPress', 'img/wordpress-customization-525x300.jpg');
+  projects[5] = new Project('Digital Designs', 'digitalDesign', 'img/design-logo-525x300.jpg');
+  projects[6] = new Project('Infographics', 'infographics', 'img/db-infographic-525x300.jpg');
+  projects[7] = new Project('Brand Development', 'brandDevelopment', 'img/Saddleback-Church-Ministry-Brand-525x300.jpg');
 
 ///////////////////////////
 //// RENDER ////
@@ -45,9 +47,16 @@ for (var i = 0; i < projects.length; i++) {
       img.alt = project.name;
       img.className = 'img-responsive center-block img-rounded shadow modalImg';
       img.dataset.toggle = 'modal';
-      img.dataset.target = project.id;
+      img.dataset.target = project.modalTarget;
     header = document.createElement('h3');
       header.textContent = project.name;
+
+    /* Modal needs to be standardized before this can work
+    var modal = '<div class="modal" id="' + project.id + '" tabindex="-1" role="dialog" aria-labelledby="' +
+        project.modalLabel + '" aria-hidden="true"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header"><button type="button" class="btn btn-default pull-right" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button><h4 class="modal-title"' +
+        'id="' + project.modalLabel + '">' + project.name + '</h4></div><div class="modal-body">' +
+        project.desc + '</div><div class="modal-footer"><button type="button" class="btn btn-default" data-dismiss="modal">Close</button></div></div></div></div>'
+    */
 
     /* When we click, unhide project
     list.addEventListener('click', (function(projectCopy) {

@@ -37,12 +37,12 @@ a:hover, a:active, a:focus {
     font-size: 26px;
 }
 .header {
-    border-bottom: 1px solid #aaa;
+    border-bottom: 1px solid #e5e5e5;
     padding-bottom: 20px;
     margin-bottom: 30px;
 }
 .footer {
-    border-top: 1px solid #aaa;
+    border-top: 1px solid #e5e5e5;
     padding: 20px;
 }
 .footer > div > a {
