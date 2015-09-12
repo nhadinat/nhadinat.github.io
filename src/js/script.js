@@ -28,7 +28,7 @@ var projects = [1,2,3,4,5,6,7,8];
 //// RENDER ////
 ///////////////////////////
 // Declare for loop vars
-var project, elem, list, header, img, counter;
+var project, elem, header, img;
 // Loop over the numbers in projects array
 for (var i = 0; i < projects.length; i++) {
 
