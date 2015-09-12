@@ -9,7 +9,7 @@
 // Project Class
 var Project = function (stringName, stringId, stringUrl){
   this.name = stringName;
-  this.id = stringId;
+  this.id = stringId + 'Project';
   this.modalTarget = '#' + stringId;
   this.modalLabel = stringId + 'Label';
   this.src = stringUrl;
