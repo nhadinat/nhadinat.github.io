@@ -11,7 +11,7 @@ var Project = function (stringName, stringId, stringUrl){
   this.name = stringName;
   this.id = stringId;
   this.modalTarget = '#' + stringId;
-  this.modalLabel = this.id + 'Label';
+  this.modalLabel = stringId + 'Label';
   this.src = stringUrl;
 };
 
