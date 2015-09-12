@@ -35,10 +35,15 @@ gulp.task('pngs', ['images'], function () {
 
 // Concatenate And Minify JavaScript
 gulp.task('scripts', ['pngs'], function(){
-  return gulp.src('./src/js/bootstrap.js')
+  var bootstrap = gulp.src('./src/js/bootstrap.js')
     .pipe(rename('bootstrap.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('./js'));
+  var myScript = gulp.src('./src/js/script.js')
+    .pipe(rename('script.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('./js'));
+  return merge(bootstrap, myScript);
 });
 
 /* TODO: Figure out how to unCSS bootstrap
