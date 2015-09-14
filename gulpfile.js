@@ -10,7 +10,7 @@ var gulp = require('gulp'),
   minifyCSS = require('gulp-minify-css'),
   rename = require("gulp-rename"),
   minifyHTML = require('gulp-minify-html'),
-  // uncss = require('gulp-uncss'),
+  uncss = require('gulp-uncss'),
   inlinesource = require('gulp-inline-source');
 
 ///////////////* Stream *///////////////
@@ -46,15 +46,6 @@ gulp.task('scripts', ['pngs'], function(){
   return merge(bootstrap, myScript);
 });
 
-/* TODO: Figure out how to unCSS bootstrap
-// UnCSS Pizza HTML
-gulp.task('uncss', ['scripts'], function() {
-  return gulp.src('./src/views/css/bootstrap-grid.css')
-    .pipe(uncss({html: './src/views/pizza.html'}))
-    .pipe(gulp.dest('./views/css'));
-});
-*/
-
 // Minify CSS
 gulp.task('styles', ['scripts'], function(){
   var style = gulp.src('./src/css/style.css')
@@ -85,8 +76,15 @@ gulp.task('html', ['styles'], function() {
     .pipe(gulp.dest('./'));
 });
 
+// UnCSS by HTML
+gulp.task('uncss', ['html'], function() {
+  return gulp.src('./css/bootstrap.min.css')
+    .pipe(uncss({html: ['./*.html']}))
+    .pipe(gulp.dest('./css'));
+});
+
 // Inline HTML Sources
-gulp.task('inline', ['html'], function() {
+gulp.task('inline', ['uncss'], function() {
   return gulp.src('./*.html')
     .pipe(inlinesource())
     .pipe(gulp.dest('./'));
@@ -94,13 +92,13 @@ gulp.task('inline', ['html'], function() {
 
 ///////////////* Default *///////////////
 // DEFAULT Group: Optimize and Build
-gulp.task('default', ['images', 'pngs', 'scripts', 'styles', 'html', 'inline']);
+gulp.task('default', ['images', 'pngs', 'scripts', 'styles', 'html', 'uncss', 'inline']);
 
 ///////////////* Watch *///////////////
 // Watch
 gulp.task('watch', function () {
   gulp.watch('./src/*.html', ['html', 'inline']);
-  gulp.watch('./src/css/*.css', ['styles', 'html', 'inline']);
+  gulp.watch('./src/css/*.css', ['styles', 'html', 'uncss', 'inline']);
   gulp.watch('./src/js/*.js', ['scripts', 'html', 'inline']);
   gulp.watch('./src/img/*', ['images', 'pngs']);
 });
