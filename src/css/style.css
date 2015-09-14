@@ -8,6 +8,7 @@ h4 {
 }
 h3 {
     font-size: 15px;
+    font-weight: 500;
     margin-top: 10px;
 }
 p {
@@ -28,7 +29,8 @@ img {
     background-color: #fff;
 }
 .header-name {
-    font-family: 'Lato', sans-serif; font-weight: 300;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
     font-size: 30px;
 }
 .header-logo {
