@@ -7,32 +7,32 @@
 //// MODEL ////
 ///////////////////////////
 // Project Class
-var Project = function (stringName, stringId, stringSrc, stringUrl){
+var Project = function (stringName, stringId, stringSrc){
   this.name = stringName;
-  this.id = stringId + 'Project';
-  this.linkId = stringId + 'Link';
+  this.id = stringId + '-project';
+  this.linkId = stringId + '-link';
   this.src = stringSrc;
-  this.url = stringUrl;
+  this.url = 'http://nhadinat.github.io/' + stringId;
 };
 
 var projects = [1,2,3,4,5,6,7,8];
   // Fill out array with the superclass
-  projects[0] = new Project('Arcade Game', 'arcadeGame',
-    'img/arcade-game-525x300.jpg', '#');
-  projects[1] = new Project('Javascript Resume', 'jsResume',
-    'img/js-resume-525x300.jpg', '#');
-  projects[2] = new Project('Website Design Mockup', 'webDesign',
-    'img/website-mockup-1-525-300.jpg', '#');
-  projects[3] = new Project('Mobile App Wireframe', 'mobileWireframe',
-    'img/mobile-app-wireframe-1-525x300.jpg', '#');
-  projects[4] = new Project('Wordpress Sites', 'wordPress',
-    'img/wordpress-customization-525x300.jpg', '#');
-  projects[5] = new Project('Digital Designs', 'digitalDesign',
-    'img/design-logo-525x300.jpg', '#');
+  projects[0] = new Project('Arcade Game', 'arcade-game',
+    'img/arcade-game-525x300.jpg');
+  projects[1] = new Project('Javascript Resume', 'js-resume',
+    'img/js-resume-525x300.jpg');
+  projects[2] = new Project('Website Design Mockup', 'web-design',
+    'img/website-mockup-1-525-300.jpg');
+  projects[3] = new Project('Mobile App Wireframe', 'mobile-wireframe',
+    'img/mobile-app-wireframe-1-525x300.jpg');
+  projects[4] = new Project('Wordpress Sites', 'wordpress',
+    'img/wordpress-customization-525x300.jpg');
+  projects[5] = new Project('Digital Designs', 'digital-design',
+    'img/design-logo-525x300.jpg');
   projects[6] = new Project('Infographics', 'infographics',
-    'img/db-infographic-525x300.jpg', '#');
-  projects[7] = new Project('Brand Development', 'brandDevelopment',
-    'img/Saddleback-Church-Ministry-Brand-525x300.jpg', '#');
+    'img/db-infographic-525x300.jpg');
+  projects[7] = new Project('Brand Development', 'brand-development',
+    'img/Saddleback-Church-Ministry-Brand-525x300.jpg');
 
 ///////////////////////////
 //// VIEW ////
