@@ -7,30 +7,38 @@
 //// MODEL ////
 ///////////////////////////
 // Project Class
-var Project = function (stringName, stringId, stringUrl){
+var Project = function (stringName, stringId, stringSrc, stringUrl){
   this.name = stringName;
   this.id = stringId + 'Project';
-  this.modalTarget = '#' + stringId;
-  this.modalLabel = stringId + 'Label';
-  this.src = stringUrl;
+  this.linkId = 'a-' + stringId;
+  this.src = stringSrc;
+  this.url = stringUrl;
 };
 
 var projects = [1,2,3,4,5,6,7,8];
   // Fill out array with the superclass
-  projects[0] = new Project('Arcade Game', 'arcadeGame', 'img/arcade-game-525x300.jpg');
-  projects[1] = new Project('Javascript Resume', 'jsResume', 'img/js-resume-525x300.jpg');
-  projects[2] = new Project('Website Design Mockup', 'webDesign', 'img/website-mockup-1-525-300.jpg');
-  projects[3] = new Project('Mobile App Wireframe', 'mobileWireframe', 'img/mobile-app-wireframe-1-525x300.jpg');
-  projects[4] = new Project('Wordpress Sites', 'wordPress', 'img/wordpress-customization-525x300.jpg');
-  projects[5] = new Project('Digital Designs', 'digitalDesign', 'img/design-logo-525x300.jpg');
-  projects[6] = new Project('Infographics', 'infographics', 'img/db-infographic-525x300.jpg');
-  projects[7] = new Project('Brand Development', 'brandDevelopment', 'img/Saddleback-Church-Ministry-Brand-525x300.jpg');
+  projects[0] = new Project('Arcade Game', 'arcadeGame',
+    'img/arcade-game-525x300.jpg', '#');
+  projects[1] = new Project('Javascript Resume', 'jsResume',
+    'img/js-resume-525x300.jpg', '#');
+  projects[2] = new Project('Website Design Mockup', 'webDesign',
+    'img/website-mockup-1-525-300.jpg', '#');
+  projects[3] = new Project('Mobile App Wireframe', 'mobileWireframe',
+    'img/mobile-app-wireframe-1-525x300.jpg', '#');
+  projects[4] = new Project('Wordpress Sites', 'wordPress',
+    'img/wordpress-customization-525x300.jpg', '#');
+  projects[5] = new Project('Digital Designs', 'digitalDesign',
+    'img/design-logo-525x300.jpg', '#');
+  projects[6] = new Project('Infographics', 'infographics',
+    'img/db-infographic-525x300.jpg', '#');
+  projects[7] = new Project('Brand Development', 'brandDevelopment',
+    'img/Saddleback-Church-Ministry-Brand-525x300.jpg', '#');
 
 ///////////////////////////
-//// RENDER ////
+//// VIEW ////
 ///////////////////////////
 // Declare for loop vars
-var project, elem, header, img;
+var project, elem, link, header, img;
 // Loop over the numbers in projects array
 for (var i = 0; i < projects.length; i++) {
 
@@ -42,12 +50,13 @@ for (var i = 0; i < projects.length; i++) {
     elem = document.createElement('div');
       elem.id = project.id;
       elem.className = 'col-xs-4 project';
+    link = document.createElement('a');
+      link.id = project.linkId;
+      link.href = project.url;
+      link.alt = project.name;
     img = document.createElement('img');
       img.src = project.src;
-      img.alt = project.name;
       img.className = 'img-responsive center-block img-rounded shadow highlight';
-      img.dataset.toggle = 'modal';
-      img.dataset.target = project.modalTarget;
     header = document.createElement('h3');
       header.textContent = project.name;
 
@@ -68,6 +77,6 @@ for (var i = 0; i < projects.length; i++) {
 
     // Append all the projects
     document.getElementById('featuredProjects').appendChild(elem);
-    document.getElementById(project.id).appendChild(img);
+    document.getElementById(project.linkId).appendChild(img);
     document.getElementById(project.id).appendChild(header);
 }
