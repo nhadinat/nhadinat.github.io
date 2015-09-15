@@ -10,7 +10,7 @@
 var Project = function (stringName, stringId, stringSrc, stringUrl){
   this.name = stringName;
   this.id = stringId + 'Project';
-  this.linkId = 'a-' + stringId;
+  this.linkId = stringId + 'Link';
   this.src = stringSrc;
   this.url = stringUrl;
 };
@@ -77,6 +77,7 @@ for (var i = 0; i < projects.length; i++) {
 
     // Append all the projects
     document.getElementById('featuredProjects').appendChild(elem);
+    document.getElementById(project.id).appendChild(link);
     document.getElementById(project.linkId).appendChild(img);
     document.getElementById(project.id).appendChild(header);
 }
