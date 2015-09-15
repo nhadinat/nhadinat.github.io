@@ -15,7 +15,7 @@ var Project = function (stringName, stringId, stringSrc){
   this.url = 'http://nhadinat.github.io/' + stringId;
 };
 
-var projects = [1,2,3,4,5,6,7,8];
+var projects = [];
   // Fill out array with the superclass
   projects[0] = new Project('Arcade Game', 'arcade-game',
     'img/arcade-game-525x300.jpg');
