@@ -12,7 +12,7 @@ var Project = function (stringName, stringId, stringSrc){
   this.id = stringId + '-project';
   this.linkId = stringId + '-link';
   this.src = stringSrc;
-  this.url = 'http://nhadinat.github.io/' + stringId;
+  this.url = '/' + stringId;
 };
 
 var projects = [];
