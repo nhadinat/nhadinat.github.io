@@ -18,7 +18,7 @@ a {
     color: #337ab7;
 }
 a:hover, a:active, a:focus {
-    color: #aaa;
+    color: #337ab7;
 }
 img {
     background-color: #e5e5e5;
@@ -47,16 +47,6 @@ img {
     padding-bottom: 20px;
     margin-bottom: 30px;
 }
-.footer {
-    border-top: 1px solid #e5e5e5;
-    padding: 20px;
-}
-.footer > div > a {
-    color: #444;
-}
-.footer > div > a:hover, a:active, a:focus {
-    color: #aaa;
-}
 .project {
     min-width: 50%;
     padding-bottom: 15px;
@@ -73,6 +63,38 @@ img {
 }
 .fa-3x {
     font-size: 2.5em;
+}
+.footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 20px;
+}
+.footer > div > a {
+    color: #444;
+}
+.footer > div > a:hover, a:active, a:focus {
+    color: #aaa;
+}
+
+/*
+ *
+ * Project Page Styles
+ *
+ */
+
+.project-header {
+    border-bottom: 1px solid #e5e5e5;
+    padding-bottom: 20px;
+}
+.project-footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 20px;
+    margin-top: 25px;
+}
+.project-footer > div > a {
+    color: #444;
+}
+.project-footer > div > a:hover, a:active, a:focus {
+    color: #aaa;
 }
 
 /*
