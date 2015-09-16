@@ -24,8 +24,7 @@ img {
     background-color: #e5e5e5;
 }
 .container {
-    max-width: 1000px;
-    margin: 0 auto 0 auto;
+    margin: 0 auto;
     background-color: #fff;
 }
 .header-name {
