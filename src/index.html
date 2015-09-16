@@ -20,7 +20,32 @@
     <![endif]-->
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" async>
+    <script type="text/javascript">
+        WebFontConfig = {
+            custom: { families: [ 'FontAwesome' ],
+                urls: [ 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'] }
+        };
+        (function() {
+            var wf = document.createElement('script');
+            wf.src = ('https:' == document.location.protocol ? 'https' : 'http') +
+                    '://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js';
+            wf.type = 'text/javascript';
+            wf.async = 'true';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(wf, s);
+        })();
+    </script>
+    <style type="text/css">
+        .wf-loading [class^="icon-"],
+        [class*=" icon-"] {
+            visibility: hidden;
+        }
+
+        .wf-active  [class^="icon-"],
+        [class*=" icon-"] {
+            visibility: visible;
+        }
+    </style>
     <!-- Custom Styles -->
     <link href="css/style.min.css" rel="stylesheet" inline>
     <!-- Google Analytics -->
