@@ -56,7 +56,7 @@ for (var i = 0; i < projects.length; i++) {
       link.alt = project.name;
     img = document.createElement('img');
       img.src = project.src;
-      img.className = 'img-responsive center-block img-rounded shadow highlight';
+      img.className = 'img-responsive img-rounded shadow highlight';
     header = document.createElement('h3');
       header.textContent = project.name;
 

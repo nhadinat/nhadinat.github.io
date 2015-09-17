@@ -3,13 +3,19 @@ body {
     color: #333;
     background-color: #f4f4f4;
 }
-h4 {
-    font-size: 18px;
-}
 h3 {
     font-size: 15px;
     font-weight: 500;
     margin-top: 10px;
+}
+@media screen and (min-width: 500px) {
+    h3 {font-size: 18px;}
+}
+@media screen and (min-width: 990px) {
+    h3 {font-size: 22px;}
+}
+h4 {
+    font-size: 18px;
 }
 p {
     margin: 10px 0;
@@ -29,29 +35,68 @@ img {
     margin: 0 auto;
     background-color: #fff;
 }
-.header-name {
-    font-family: 'Lato', sans-serif;
-    font-weight: 300;
-    font-size: 30px;
-}
-.header-logo {
-    margin: 25px 0 0 0;
-    display: inline;
-}
-.featured {
-    margin: 10px 0 15px 0;
-    color: #aaa;
-    font-size: 26px;
-}
+
+/* Header */
+
 .header {
     border-bottom: 1px solid #e5e5e5;
     padding-bottom: 20px;
     margin-bottom: 30px;
 }
+.header-name {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+}
+    @media screen and (min-width: 500px) {
+        .header-name {font-size: 34px;}
+    }
+    @media screen and (min-width: 768px) {
+        .header-name {font-size: 52px;}
+    }
+.header-logo {
+    margin: 25px 0 0 0;
+    display: inline;
+}
+
+/* Featured Projects */
+
+.featured {
+    margin: 10px 0 15px 0;
+    color: #aaa;
+    font-size: 26px;
+}
+    @media screen and (min-width: 500px) {
+        .featured {font-size: 30px;}
+    }
 .project {
     min-width: 50%;
     padding-bottom: 15px;
 }
+    @media screen and (min-width: 500px) {
+        .project {min-width: 50%;}
+    }
+    @media screen and (min-width: 768px) {
+        .project {min-width: 33%;}
+    }
+
+/* footer */
+
+.footer {
+    border-top: 1px solid #e5e5e5;
+    padding: 20px;
+}
+.footer > div > a {
+    color: #444;
+}
+.footer > div > a:hover,
+.footer > div > a:active,
+.footer > div > a:focus {
+    color: #aaa;
+}
+
+/* Other */
+
 .shadow {
     -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
        -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
@@ -65,18 +110,9 @@ img {
 .fa-3x {
     font-size: 2.5em;
 }
-.footer {
-    border-top: 1px solid #e5e5e5;
-    padding: 20px;
-}
-.footer > div > a {
-    color: #444;
-}
-.footer > div > a:hover,
-.footer > div > a:active,
-.footer > div > a:focus {
-    color: #aaa;
-}
+    @media screen and (min-width: 500px) {
+        .fa-3x {font-size: 3em;}
+    }
 
 /*
  *
@@ -107,55 +143,17 @@ img {
 
 /*
  *
- * Media Sizes
- *
- */
-@media screen and (min-width: 500px) {
-    .header-name {
-        font-size: 34px;
-    }
-    .featured {
-        font-size: 30px;
-    }
-    .project {
-        min-width: 50%;
-    }
-    h3 {
-        font-size: 18px;
-    }
-    .fa-3x {
-        font-size: 3em;
-    }
-}
-@media screen and (min-width: 768px) {
-    .header-name {
-        font-size: 52px;
-    }
-    .project {
-        min-width: 33%;
-    }
-}
-@media screen and (min-width: 990px) {
-    h3 {
-        font-size: 22px;
-    }
-}
-
-/*
- *
  * Box Shadow (Effect 8 CSS-Tricks)
  *
  */
 
-.effect8
-{
+.effect8 {
     position:relative;
     -webkit-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
        -moz-box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
             box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
-.effect8:before, .effect8:after
-{
+.effect8:before, .effect8:after {
     content: "";
     position: absolute;
     z-index: -1;
@@ -169,8 +167,7 @@ img {
     -moz-border-radius: 100px / 10px;
     border-radius: 100px / 10px;
 }
-.effect8:after
-{
+.effect8:after {
     right: 10px;
     left: auto;
     -webkit-transform: skew(8deg) rotate(3deg);
