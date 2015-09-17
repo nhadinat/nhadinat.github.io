@@ -17,18 +17,18 @@ var Project = function (stringName, stringId, stringSrc){
 
 var projects = [];
   // Fill out array with the superclass
-  projects[0] = new Project('Arcade Game', 'arcade-game',
-    'img/arcade-game-525x300.jpg');
-  projects[1] = new Project('Javascript Resume', 'js-resume',
-    'img/js-resume-525x300.jpg');
-  projects[2] = new Project('Website Design Mockup', 'web-design',
-    'img/website-mockup-1-525-300.jpg');
-  projects[3] = new Project('Mobile App Wireframe', 'mobile-wireframe',
+  projects[0] = new Project('Mobile App Wireframe', 'mobile-wireframe',
     'img/mobile-app-wireframe-1-525x300.jpg');
-  projects[4] = new Project('Wordpress Sites', 'wordpress',
+  projects[1] = new Project('Website Design Mockup', 'web-design',
+    'img/website-mockup-1-525-300.jpg');
+  projects[2] = new Project('Wordpress Sites', 'wordpress',
     'img/wordpress-customization-525x300.jpg');
-  projects[5] = new Project('Digital Designs', 'digital-design',
+  projects[3] = new Project('Digital Designs', 'digital-design',
     'img/design-logo-525x300.jpg');
+  projects[4] = new Project('Arcade Game', 'arcade-game',
+    'img/arcade-game-525x300.jpg');
+  projects[5] = new Project('Javascript Resume', 'js-resume',
+    'img/js-resume-525x300.jpg');
   projects[6] = new Project('Infographics', 'infographics',
     'img/db-infographic-525x300.jpg');
   projects[7] = new Project('Brand Development', 'brand-development',

@@ -17,7 +17,9 @@ p {
 a {
     color: #337ab7;
 }
-a:hover, a:active, a:focus {
+a:hover,
+a:active,
+a:focus {
     color: #337ab7;
 }
 img {
@@ -70,7 +72,9 @@ img {
 .footer > div > a {
     color: #444;
 }
-.footer > div > a:hover, a:active, a:focus {
+.footer > div > a:hover,
+.footer > div > a:active,
+.footer > div > a:focus {
     color: #aaa;
 }
 
