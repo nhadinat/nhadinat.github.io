@@ -69,15 +69,12 @@ img {
     @media screen and (min-width: 500px) {
         .featured {font-size: 30px;}
     }
-.project {
-    min-width: 50%;
-    padding-bottom: 15px;
+.projects {
+    margin-bottom: 4px;
 }
     @media screen and (min-width: 500px) {
-        .project {min-width: 50%;}
     }
     @media screen and (min-width: 768px) {
-        .project {min-width: 33%;}
     }
 
 /* footer */
@@ -159,7 +156,7 @@ img {
     z-index: -1;
     -webkit-box-shadow: 0 0 20px rgba(0,0,0,0.8);
     -moz-box-shadow: 0 0 20px rgba(0,0,0,0.8);
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px rgolba(0,0,0,0.8);
     top: 10px;
     bottom: 10px;
     left: 0;

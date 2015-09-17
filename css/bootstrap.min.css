@@ -26,8 +26,13 @@ figure {
   margin: 0;
 }
 
+.text-nowrap {
+  white-space: nowrap;
+}
+
 .col-xs-3,
 .col-xs-4,
+.col-xs-6,
 .col-xs-8 {
   float: left;
 }
@@ -167,12 +172,10 @@ p {
   text-transform: uppercase;
 }
 
-ol,
 ul {
   margin-top: 0;
 }
 
-ol,
 ul {
   margin-bottom: 10px;
 }
@@ -214,6 +217,7 @@ ul {
 .col-sm-6,
 .col-xs-3,
 .col-xs-4,
+.col-xs-6,
 .col-xs-8 {
   position: relative;
   min-height: 1px;
@@ -223,6 +227,10 @@ ul {
 
 .col-xs-8 {
   width: 66.66666667%;
+}
+
+.col-xs-6 {
+  width: 50%;
 }
 
 .col-xs-4 {
