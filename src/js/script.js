@@ -48,8 +48,8 @@ for (var i = 0; i < projects.length; i++) {
     // We're creating a DOM element for the number
     // dataset.toggle/target
     elem = document.createElement('div');
+      elem.className = 'col-xs-6 projects';
       elem.id = project.id;
-      elem.className = 'col-xs-4 project';
     link = document.createElement('a');
       link.id = project.linkId;
       link.href = project.url;

@@ -51,7 +51,7 @@ img {
     @media screen and (min-width: 500px) {
         .header-name {font-size: 34px;}
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 700px) {
         .header-name {font-size: 52px;}
     }
 .header-logo {
@@ -72,9 +72,10 @@ img {
 .projects {
     margin-bottom: 10px;
 }
-    @media screen and (min-width: 500px) {
+    @media screen and (min-width: 700px) {
+        .projects{width: 33%;}
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 990px) {
     }
 
 /* footer */
