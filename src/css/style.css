@@ -135,7 +135,9 @@ img {
 .project-footer > div > a {
     color: #444;
 }
-.project-footer > div > a:hover, a:active, a:focus {
+.project-footer > div > a:hover,
+.project-footer > div > a:active,
+.project-footer > div > a:focus {
     color: #aaa;
 }
 
