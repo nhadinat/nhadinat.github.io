@@ -1,7 +1,7 @@
 body {
     font-family: 'Lato', sans-serif;
     color: #333;
-    background-color: #f4f4f4;
+    background-color: #d7dee2;
 }
 h3 {
     font-size: 15px;
@@ -74,6 +74,10 @@ h2.featured {
     @media screen and (min-width: 500px) {
         .featured {font-size: 30px;}
     }
+#featuredProjects {
+    background-color: #f5f5f5;
+    border-top: 1px solid #e5e5e5;
+}
 .projects {
     margin: 10px 0;
 }
