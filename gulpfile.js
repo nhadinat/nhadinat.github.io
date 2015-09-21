@@ -22,8 +22,11 @@ gulp.task('clean', function (cb) {
 
 // Move JPGs Into Dist (Unfortunately, I cannot use imagemin because I run Win7 :'( )
 gulp.task('images', function() {
-  return gulp.src('./src/img/*.jpg')
+  var jpgs = gulp.src('./src/img/*.jpg')
     .pipe(gulp.dest('./img'));
+  var svgs = gulp.src('./src/img/*.svg')
+    .pipe(gulp.dest('./img'));
+  return merge(jpgs, svgs);
 });
 
 // Optimize PNGs

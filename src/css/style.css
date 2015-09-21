@@ -50,6 +50,14 @@ header {
     margin: 0 0 0 -15px;
     height: 135px;
     float: left;
+    opacity: 0.75;
+}
+
+.header-logo:hover {
+    transition: .4s;
+    opacity: 9;
+    filter: alpha(opacity=90);
+    cursor: pointer;
 }
 
 /* Featured Projects */
