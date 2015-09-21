@@ -34,7 +34,7 @@ gulp.task('pngs', ['images'], function () {
 });
 
 // Concatenate And Minify JavaScript
-gulp.task('scripts', ['pngs'], function(){
+gulp.task('scripts', function(){
   var bootstrap = gulp.src('./src/js/bootstrap.js')
     .pipe(rename('bootstrap.min.js'))
     .pipe(uglify())
@@ -92,12 +92,12 @@ gulp.task('inline', ['uncss'], function() {
 
 ///////////////* Default *///////////////
 // DEFAULT Group: Optimize and Build
-gulp.task('default', ['images', 'pngs', 'scripts', 'styles', 'html', 'uncss', 'inline']);
+gulp.task('default', ['scripts', 'styles', 'html', 'uncss', 'inline']);
 
 ///////////////* Watch *///////////////
 // Watch
 gulp.task('watch', function () {
-  gulp.watch('./src/*.html', ['html', 'inline']);
+  gulp.watch('./src/*.html', ['html', 'uncss', 'inline']);
   gulp.watch('./src/css/*.css', ['styles', 'html', 'uncss', 'inline']);
   gulp.watch('./src/js/*.js', ['scripts', 'html', 'inline']);
   gulp.watch('./src/img/*', ['images', 'pngs']);
