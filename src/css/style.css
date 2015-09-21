@@ -30,7 +30,6 @@ img {
     background-color: #e5e5e5;
 }
 .container {
-    max-width: 970px;
     margin: 0 auto;
     background-color: #fff;
 }
@@ -80,6 +79,9 @@ h2.featured {
 }
     @media screen and (min-width: 700px) {
         .projects{width: 33.33%;}
+    }
+    @media screen and (min-width: 1200px) {
+        .projects{width: 25%;}
     }
 
 /* footer */
