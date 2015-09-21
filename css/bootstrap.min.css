@@ -30,6 +30,7 @@ figure {
   white-space: nowrap;
 }
 
+.col-xs-12,
 .col-xs-3,
 .col-xs-4,
 .col-xs-6,
@@ -217,6 +218,7 @@ ul {
 
 .col-md-12,
 .col-sm-6,
+.col-xs-12,
 .col-xs-3,
 .col-xs-4,
 .col-xs-6,
@@ -225,6 +227,10 @@ ul {
   min-height: 1px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.col-xs-12 {
+  width: 100%;
 }
 
 .col-xs-8 {

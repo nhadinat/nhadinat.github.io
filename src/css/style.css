@@ -37,24 +37,19 @@ img {
 /* Header */
 
 header {
-    border-bottom: 1px solid #e5e5e5;
-    padding-bottom: 15px;
     margin-bottom: 15px;
 }
-.header-name {
-    margin-top: 15px;
-    font-weight: 300;
-    font-size: 30px;
+.header-bg {
+    background-repeat: no-repeat;
+    height: 135px;
+        background-image: url(img/pier39-header.jpg);
+        background-color: #c9ddde;
 }
-    @media screen and (min-width: 500px) {
-        .header-name {font-size: 34px;}
-    }
-    @media screen and (min-width: 700px) {
-        .header-name {font-size: 52px;}
-    }
 .header-logo {
-    margin: 15px 0 0 0;
-    display: inline;
+    background-color: transparent;
+    margin: 0 0 0 -15px;
+    height: 135px;
+    float: left;
 }
 
 /* Featured Projects */
