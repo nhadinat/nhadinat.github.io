@@ -41,20 +41,20 @@ header {
 }
 .header-bg {
     background-repeat: no-repeat;
-    height: 135px;
+    height: 130px;
         background-image: url(img/pier39-header.jpg);
         background-color: #c9ddde;
 }
 .header-logo {
     background-color: transparent;
-    margin: 0 0 0 -15px;
+    margin: -3px 0 0 -15px;
     height: 135px;
     float: left;
     opacity: 0.75;
+    transition: opacity 1s;
 }
 
 .header-logo:hover {
-    transition: .4s;
     opacity: 9;
     filter: alpha(opacity=90);
     cursor: pointer;
