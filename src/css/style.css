@@ -76,12 +76,10 @@ h2.featured {
     border-top: 1px solid #e5e5e5;
 }
 .projects {
-    margin: 10px 0;
+    margin: 15px 0 5px 0;
 }
     @media screen and (min-width: 700px) {
         .projects{width: 33.33%;}
-    }
-    @media screen and (min-width: 990px) {
     }
 
 /* footer */
