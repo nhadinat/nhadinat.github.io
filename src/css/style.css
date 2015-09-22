@@ -100,6 +100,9 @@ h2.featured {
 .projects {
     margin: 15px 0 5px 0;
 }
+    @media screen and (max-width: 350px) {
+        .projects{width: 100%;}
+    }
     @media screen and (min-width: 700px) {
         .projects{width: 33.33%;}
     }
