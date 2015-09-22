@@ -41,20 +41,28 @@ header {
 }
 .header-bg {
     background-repeat: no-repeat;
-    height: 130px;
+    height: 76px;
         background-image: url(img/pier39-header.jpg);
         background-color: #c9ddde;
+        background-size: cover;
         box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.5);
 }
+    @media screen and (min-width: 500px) {
+        .header-bg {
+            height: 130px;
+        }
+    }
 .header-logo {
     background-color: transparent;
     margin: -3px 0 0 -15px;
-    height: 135px;
+    height: 80px;
     float: left;
     opacity: 0.75;
     transition: opacity .2s;
 }
-
+    @media screen and (min-width: 500px) {
+        .header-logo {height: 135px;}
+    }
 .header-logo:hover {
     opacity: 9;
     filter: alpha(opacity=90);
