@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif;
     color: #3c5254;
     background: #e7f0f1;
-    background: linear-gradient(#D0E1E2, #e7f0f1 30%);
+    background: linear-gradient(#BED3D6, #e7f0f1 30%);
     font-size: 16px;
     font-weight: 300;
 }
@@ -61,7 +61,7 @@ img {
 }
     @media screen and (max-width: 500px) {
         .layout-padding-bottom {
-            padding-bottom: 4em;
+            padding-bottom: 3em;
         }
     }
 .container {
