@@ -36,16 +36,25 @@ li {
     line-height: 1.5em;
 }
 a {
-    color: #00bbd0;
+    color: #00aac0;
 }
 a:hover,
 a:active,
 a:focus {
-    color: #00e5ff;
+    color: #00d1e8;
 }
 img {
     background-color: #708d90;
 }
+
+.layout-padding-top {
+    padding-top: 1em;
+}
+    @media screen and (min-width: 500px) {
+        .layout-padding-top {
+            padding-top: 2em;
+        }
+    }
 .container {
     margin: 0 auto;
     background-color: #e7f0f1;
@@ -175,6 +184,7 @@ ol.breadcrumb {
     padding: 0.5em 1em 0.5em 0;
     margin-bottom: 1em;
     list-style: none;
+    background: #e7f0f1;
 }
 .project-title {
     margin: 10px 0 15px 0;
@@ -194,6 +204,10 @@ ol.breadcrumb {
 .project-footer > div > a:active,
 .project-footer > div > a:focus {
     color: #cfdbdc;
+}
+
+figcaption {
+    margin: 1em;
 }
 
 /*
