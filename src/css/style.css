@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300|Roboto:300,500');
+
 body {
-    font-family: 'Lato', sans-serif;
-    color: #333;
-    background-color: #d7dee2;
+    font-family: 'Roboto', sans-serif;
+    color: #3c5254;
+    background-color: #e7f0f1;
     font-size: 16px;
+    font-weight: 300;
+}
+h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+h2 {
+    font-family: 'Roboto Condensed', sans-serif;
 }
 h3 {
     font-size: 15px;
@@ -10,7 +19,7 @@ h3 {
     margin-top: 10px;
 }
 @media screen and (min-width: 500px) {
-    h3 {font-size: 18px;}
+    h3 {font-size: 16px;}
 }
 h4 {
     font-weight: 300;
@@ -19,21 +28,23 @@ h4 {
 p {
     margin: 10px 0;
     line-height: 1.8em;
+    letter-spacing: 0.2px;
+    font-size: 1.1em;
 }
 a {
-    color: #337ab7;
+    color: #00bbd0;
 }
 a:hover,
 a:active,
 a:focus {
-    color: #337ab7;
+    color: #00e5ff;
 }
 img {
-    background-color: #e5e5e5;
+    background-color: #708d90;
 }
 .container {
     margin: 0 auto;
-    background-color: #fff;
+    background-color: #e7f0f1;
 }
 
 /* Header */
@@ -44,10 +55,10 @@ header {
 .header-bg {
     background-repeat: no-repeat;
     height: 76px;
-        background-image: url(img/pier39-header.jpg);
-        background-color: #c9ddde;
-        background-size: cover;
-        box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.5);
+        /*background-image: url(img/pier39-header.jpg);*/
+        background-color: #e7f0f1;
+        /*background-size: cover;*/
+        /*box-shadow: inset 0 -1px 1px rgba(255, 255, 255, 0.5);*/
 }
     @media screen and (min-width: 500px) {
         .header-bg {
@@ -73,6 +84,10 @@ header {
 
 /* Intro */
 
+.description {
+    max-width: 700px;
+}
+
 img.profile {
     max-width: 100%;
     float: left;
@@ -89,16 +104,13 @@ div.featured {
 }
 h2.featured {
     margin: 0;
-    color: #aaa;
+    color: #708d90;
     font-size: 26px;
+    text-transform: uppercase;
 }
     @media screen and (min-width: 500px) {
         .featured {font-size: 30px;}
     }
-#featuredProjects {
-    background-color: #f5f5f5;
-    border-top: 1px solid #e5e5e5;
-}
 .projects {
     margin: 15px 0 5px 0;
 }
@@ -115,17 +127,18 @@ h2.featured {
 /* footer */
 
 .footer {
-    border-top: 1px solid #e5e5e5;
-    padding: 20px;
+    border-top: 1px solid #cfdbdc;
+    padding: 3em 1em 1em 1em;
+    margin: 3em 1em 1em 1em;
 }
 .footer > div > a {
-    color: #444;
+    color: #708d90;
     transition: color .2s;
 }
 .footer > div > a:hover,
 .footer > div > a:active,
 .footer > div > a:focus {
-    color: #aaa;
+    color: #3c5254;
 }
 
 /* Other */
@@ -156,22 +169,22 @@ h2.featured {
 
 .project-title {
     margin: 10px 0 15px 0;
-    color: #333;
+    color: #3c5254;
     font-size: 26px;
 }
 .project-footer {
-    border-top: 1px solid #e5e5e5;
-    padding: 20px;
-    margin-top: 25px;
+    border-top: 1px solid #cfdbdc;
+    padding: 3em 1em 1em 1em;
+    margin: 3em 1em 1em 1em;
 }
 .project-footer > div > a {
-    color: #444;
+    color: #3c5254;
     transition: color .2s;
 }
 .project-footer > div > a:hover,
 .project-footer > div > a:active,
 .project-footer > div > a:focus {
-    color: #aaa;
+    color: #cfdbdc;
 }
 
 /*
