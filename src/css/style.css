@@ -248,6 +248,10 @@ ol.breadcrumb {
     margin-bottom: 1em;
     list-style: none;
     background: none;
+    font-size: 12px;
+}
+.breadcrumb>li+li:before {
+    color: #cfdbdc;
 }
 .project-title {
     margin: 10px 0 15px 0;
