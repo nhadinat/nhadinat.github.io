@@ -47,6 +47,11 @@ a:focus {
 img {
     background-color: #708d90;
 }
+hr {
+    margin-top: 3em;
+    margin-bottom: 3em;
+    border-top: 1px solid #cfdbdc;
+}
 
 .layout-padding-top {
     padding-top: 2em;
