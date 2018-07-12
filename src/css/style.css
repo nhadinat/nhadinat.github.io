@@ -266,6 +266,20 @@ ol.breadcrumb {
     color: #3c5254;
     font-size: 26px;
 }
+.project .project-title {
+    margin: 10px auto 15px;
+    max-width: 768px;
+}
+.project p {
+    margin: 10px auto;
+    max-width: 768px;
+    line-height: 1.8em;
+    letter-spacing: .2px;
+}
+.project ol.breadcrumb {
+    max-width: 768px;
+    margin: 0 auto 1em;
+}
 .project-footer {
     border-top: 1px solid #cfdbdc;
     padding: 3em 1em 1em 1em;
@@ -279,6 +293,9 @@ ol.breadcrumb {
 .project-footer > div > a:active,
 .project-footer > div > a:focus {
     color: #cfdbdc;
+}
+.center-block {
+    margin: 3em auto;
 }
 
 figcaption {
